@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Model{% endblock %}
+
+{% block body %}
+    <h1>Model</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ model.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ model.type }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ model.titre }}</td>
+            </tr>
+            <tr>
+                <th>Tekno</th>
+                <td>{{ model.tekno }}</td>
+            </tr>
+            <tr>
+                <th>Lien</th>
+                <td>{{ model.lien }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ model.description }}</td>
+            </tr>
+            <tr>
+                <th>ImageSrc</th>
+                <td>{{ model.imageSrc }}</td>
+            </tr>
+            <tr>
+                <th>Text1</th>
+                <td>{{ model.text1 }}</td>
+            </tr>
+            <tr>
+                <th>Text2</th>
+                <td>{{ model.text2 }}</td>
+            </tr>
+            <tr>
+                <th>Text3</th>
+                <td>{{ model.text3 }}</td>
+            </tr>
+            <tr>
+                <th>Text4</th>
+                <td>{{ model.text4 }}</td>
+            </tr>
+            <tr>
+                <th>Alt</th>
+                <td>{{ model.alt }}</td>
+            </tr>
+            <tr>
+                <th>Video</th>
+                <td>{{ model.video }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_model_index') }}">back to list</a>
+
+    <a href="{{ path('app_model_edit', {'id': model.id}) }}">edit</a>
+
+    {{ include('model/_delete_form.html.twig') }}
+{% endblock %}
