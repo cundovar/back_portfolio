@@ -31,9 +31,9 @@ final class ModelController extends AbstractController
         $data = json_decode($request->getContent(), true);
         $model = new Model();
         // s'assurer avoir une valeur par défaut
-        $model->setTitre($data['titre' ?? null]);
-        $model->setTekno($data['tekno' ?? null]);
-        $model->setDescription($data['description' ?? null]);
+        $model->setTitre($data['titre'] ?? null);
+        $model->setTekno($data['tekno'] ?? null);
+        $model->setDescription($data['description'] ?? null);
 
        
 

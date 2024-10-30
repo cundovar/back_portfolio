@@ -3,11 +3,16 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Post;
+use App\Controller\ControllerModel;
+use App\Controller\ModelController;
 use App\Repository\ModelRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 
-#[ApiResource()]
+#[ApiResource(
+  
+)]
 #[ORM\Entity(repositoryClass: ModelRepository::class)]
 class Model
 {
