@@ -25,5 +25,15 @@ services:
             $prefix: 'portfolio_' # Remplacez par votre préfixe souhaité
         tags:
             - { name: doctrine.event_subscriber }
+    
+    App\Controller\AuthController:
+        tags: ['controller.service_arguments']
+        public: true
+
+    App\Security\AccessTokenHandler:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\Component\Security\Http\AccessToken\AccessTokenHandlerInterface: '@App\Security\AccessTokenHandler'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

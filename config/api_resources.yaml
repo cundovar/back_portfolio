@@ -1,0 +1,4 @@
+api_platform:
+    formats:
+        jsonld: ['application/ld+json']
+        json: ['application/json']  # Ajoutez cette ligne pour prendre en charge application/json

@@ -18,6 +18,14 @@ class ControllerModel
         $model->setTitre($data['titre'] ?? null);
         $model->setTekno($data['tekno'] ?? null);
         $model->setDescription($data['description'] ?? null);
+        $model->setLien($data['lien'] ?? null);
+        $model->setImageSrc($data['imageSrc'] ?? null);
+        $model->setText1($data['text1'] ?? null);
+        $model->setText2($data['text2'] ?? null);
+        $model->setText3($data['text3'] ?? null);
+        $model->setText4($data['text4'] ?? null);
+        $model->setAlt($data['alt'] ?? null);
+        $model->setVideo($data['video'] ?? null);
 
        
 

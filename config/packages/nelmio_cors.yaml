@@ -1,10 +1,17 @@
+# config/packages/nelmio_cors.yaml
 nelmio_cors:
     defaults:
-        origin_regex: true
-        allow_origin: ['*']
-        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
+        allow_credentials: true
+        allow_origin: ['*']  # Vous pouvez spécifier l'origine exacte, ex: ['http://localhost:9527']
         allow_headers: ['Content-Type', 'Authorization']
         expose_headers: ['Link']
+        allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
         max_age: 3600
     paths:
-        '^/': null
+        '^/api/':  # Applique CORS à toutes les routes commençant par /api/
+            allow_origin: ['*']  # Remplacez par votre URL Vue
+            allow_methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
+            allow_headers: ['Content-Type', 'Authorization']
+            expose_headers: ['Link']
+            max_age: 3600
+
